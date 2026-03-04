@@ -34,7 +34,7 @@ function Login() {
 
 
     return (
-        <div className="flex items-center justify-center w-full m-5">
+        <div className="flex items-center justify-center  ">
             <div className={`mx-auto w-full max-w-lg bg-white rounded-xl p-10 border border-black/10`}>
 
                 <div className="mb-2 flex justify-center">
@@ -54,10 +54,10 @@ function Login() {
                 {error && <p className="text-red-500 text-center">{error}</p>}
 
                 <form onSubmit={handleSubmit(handlelogin)} className="mt-8">
-                    <div className="space-y-5">
+                    <div className="space-y-5 mt-1">
 
                         <Input
-                            label="Email"
+                            label="Email:"
                             type="email"
                             placeholder="Enter your email"
                             name={emailRegister.name}
@@ -67,7 +67,7 @@ function Login() {
                         />
 
                         <Input
-                            label="Password"
+                            label="Password:"
                             type="password"
                             placeholder="Enter your Password"
                             name={passwordRegister.name}

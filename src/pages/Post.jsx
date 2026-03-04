@@ -50,11 +50,11 @@ export default function Post() {
                     <div className="w-full max-w-3xl h-auto bg-white shadow-lg rounded-2xl p-4 relative mb-6 overflow-hidden">
 
                         {post.image ? (
-                          
+
                             <img
                                 src={appwriteService.getFilePreview(post.image)}
                                 alt={post.title}
-                                className="w-full h-full object-cover rounded-xl "//change
+                                className="w-full h-full object-cover rounded-xl "
                             />
                         ) : (
                             <p className="text-gray-500">No image</p>

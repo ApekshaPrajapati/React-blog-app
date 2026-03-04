@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login as authLogin } from "../store/authSlice";
-// import { Button, Input, Logo } from './index'
 import Button from "./Button"
 import Input from "./Input"
 import Logo from "./Logo"
@@ -15,17 +14,17 @@ function Login() {
     const dispatch = useDispatch()
     const { register, handleSubmit } = useForm()
     const [error, setError] = useState("")
-const emailRegister = register("email", { required: true })
-const passwordRegister = register("password", { required: true })
+    const emailRegister = register("email", { required: true })
+    const passwordRegister = register("password", { required: true })
 
-    const handlelogin = async (data) => {//change login to handlelogin
+    const handlelogin = async (data) => {
         setError("")
         try {
             const session = await authService.login(data)
 
             if (session) {
                 const userData = await authService.getCurrentUser()
-                if (userData) dispatch(authLogin({userData}));//add curly braces
+                if (userData) dispatch(authLogin({ userData }));
                 navigate("/")
             }
         } catch (error) {
@@ -55,52 +54,33 @@ const passwordRegister = register("password", { required: true })
                 {error && <p className="text-red-500 text-center">{error}</p>}
 
                 <form onSubmit={handleSubmit(handlelogin)} className="mt-8">
-                     <div className="space-y-5">
-                        {/* <Input
-                            label="Email: " placeholder="Enter your email" type="email" {...register("email", {
-                                required: true, validate: {
-                                    matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.
-                                        test(value) || "Email address must be a valid address"
-                                }
-                            })}>
+                    <div className="space-y-5">
 
-                        </Input>
-                        <Input label="Password:"
+                        <Input
+                            label="Email"
+                            type="email"
+                            placeholder="Enter your email"
+                            name={emailRegister.name}
+                            onChange={emailRegister.onChange}
+                            onBlur={emailRegister.onBlur}
+                            ref={emailRegister.ref}
+                        />
+
+                        <Input
+                            label="Password"
                             type="password"
                             placeholder="Enter your Password"
-                            {...register("password", {
-                                required: true,
-                            })}
-                        >  </Input> */} 
-                        <Input
-  label="Email"
-  type="email"
-  placeholder="Enter your email"
-  name={emailRegister.name}
-  onChange={emailRegister.onChange}
-  onBlur={emailRegister.onBlur}
-  ref={emailRegister.ref}
-/>
-
-<Input
-  label="Password"
-  type="password"
-  placeholder="Enter your Password"
-  name={passwordRegister.name}
-  onChange={passwordRegister.onChange}
-  onBlur={passwordRegister.onBlur}
-  ref={passwordRegister.ref}
-/>
+                            name={passwordRegister.name}
+                            onChange={passwordRegister.onChange}
+                            onBlur={passwordRegister.onBlur}
+                            ref={passwordRegister.ref}
+                        />
                         <Button
                             type="submit" className="w-full font-medium text-primary transition-all duration-200 hover:underline">Sign in
                         </Button>
                     </div>
                 </form>
-                {/* <form className="mt-8">
-    <div>
-        TEST LOGIN PAGE
-    </div>
-</form> */}
+              
             </div>
         </div>)
 }

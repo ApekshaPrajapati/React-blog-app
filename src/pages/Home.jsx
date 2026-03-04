@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, PostCard } from "../components";
 import appwriteService from '../appwrite/configapp'
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -46,13 +47,18 @@ function Home() {
                             </h1>
                         </div>
                     ) : (
-                        <div className="flex flex-wrap">
-                            {posts && posts.length > 0 && posts.map((post) => (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {posts && posts.length > 0 && posts.slice(0, 3).map((post) => (
                                 <PostCard key={post.$id} post={post} />
                             ))}
                         </div>
                     )}
-
+                    
+                    <div className="text-center mt-6">
+                        <Link to="/all-posts" className="text-blue-600 font-semibold hover:underline">
+                            View All Posts →
+                        </Link>
+                    </div>
                 </Container>
             </div>
 

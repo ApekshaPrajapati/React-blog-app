@@ -122,14 +122,14 @@ function PostForm({ post }) {
             <div className="w-2/3 px-2 ">
                 <Input label="Title:  "
                     placeholder="Title"
-                    className="mb-6 text-lg py-1.5 rounded-sm border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+                    className=" w-64 mb-6 text-lg py-1.5 rounded-sm border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
                     {...register("title", {
                         required: true
                     })}>
                 </Input>
                 <Input label="Slug: "
                     placeholder="Slug"
-                    className="mb-6 text-lg py-1.5 rounded-sm border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+                    className=" w-64 mb-6 text-lg py-1.5 rounded-sm border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
                     {...register("slug", {
                         required: true
                     })}
@@ -152,7 +152,7 @@ function PostForm({ post }) {
                                file:mr-4 file:py-2 file:px-4
                                file:rounded-lg file:border-0
                                file:text-lg file:font-semibold
-                               file:bg-blue-50 file:text-blue-700
+                               file:bg-blue-100 file:text-blue-700
                                hover:file:bg-blue-100"
                     accept="image/png, image/jpg,image/jpeg,image/gif"
                     {...register("image", {
@@ -161,8 +161,8 @@ function PostForm({ post }) {
                 </input>
 
                 {post?.image && (
-                    <div className="w-full mb-4">
-                        <img src={appwriteService.getFilePreview(post.image)} alt={post.title} />
+                    <div className="w-full mb-4 ">
+                        <img src={appwriteService.getFilePreview(post.image)} alt={post.title} className="border rounded-xl" />
                     </div>
                 )}
 

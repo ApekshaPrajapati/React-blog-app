@@ -13,7 +13,7 @@ import AuthLayout from './AuthLayout'
 import Input from './Input'
 import Select from './Select'
 import Button from './Button'
-import Post from "../pages/Post";
+// import Post from "../pages/Post";
 export{
     Header,
     Footer,
@@ -29,5 +29,5 @@ export{
     Input,
     Select,
     Button,
-    Post,
+    
 }

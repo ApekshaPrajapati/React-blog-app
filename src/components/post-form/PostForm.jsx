@@ -119,17 +119,17 @@ function PostForm({ post }) {
     return (
         <form onSubmit={(e) => { e.preventDefault(); handleSubmit(submit)(e) }} className="flex flex-wrap">
 
-            <div className="w-2/3 px-2 ">
+            <div className=" w-full md:w-2/3 px-2 ">
                 <Input label="Title:  "
                     placeholder="Title"
-                    className=" w-64 mb-6 text-lg py-1.5 rounded-sm border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+                    className=" w-full md:w-64 mb-6 text-lg py-1.5 rounded-sm border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
                     {...register("title", {
                         required: true
                     })}>
                 </Input>
                 <Input label="Slug: "
                     placeholder="Slug"
-                    className=" w-64 mb-6 text-lg py-1.5 rounded-sm border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+                    className="w-full md:w-64 mb-6 text-lg py-1.5 rounded-sm border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
                     {...register("slug", {
                         required: true
                     })}
@@ -144,7 +144,7 @@ function PostForm({ post }) {
             </div>
 
 
-            <div className="w-1/3 px-2 ">
+            <div className=" w-full md:w-1/3 px-2 mt-6 md:mt-0">
                 <input label="Featured Image: "
                     type="file"
                     placeholder="file"
@@ -162,17 +162,17 @@ function PostForm({ post }) {
 
                 {post?.image && (
                     <div className="w-full mb-4 ">
-                        <img src={appwriteService.getFilePreview(post.image)} alt={post.title} className="border rounded-xl" />
+                        <img src={appwriteService.getFilePreview(post.image)} alt={post.title} className="border rounded-xl w-full object-cover" />
                     </div>
                 )}
 
                 <Select options={["active", "inactive"]}
                     label="Status"
-                    className="mb-6 px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-400"
+                    className=" md:w-48 w-full mb-6 px-4 py-2 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-400 "
                     {...register("status", { required: true })} >
                 </Select>
                 <Button type="submit" bgColor={post ? "bg-green-500" : undefined}
-                    className="w-52 py-3 text-lg font-semibold rounded-xl 
+                    className=" w-full md:w-52 py-3 text-lg font-semibold rounded-xl 
                              bg-blue-600 text-white 
                              hover:bg-blue-700 
                                transition duration-300 

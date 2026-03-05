@@ -32,7 +32,7 @@ function AllPosts() {
 
       <h1 className="mt-4 font-semibold text-xl">Explore all blog posts created by users. </h1>
       <h1 className="text-lg mb-4">Click on any post to read the full content and learn more about modern web development.</h1>
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 ">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
 
         {posts.map((post) => (
           <div key={post.$id}>

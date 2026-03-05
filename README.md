@@ -1,16 +1,47 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# BlogSpace
 
-Currently, two official plugins are available:
+BlogSpace is a modern blogging web application where users can create accounts, publish blog posts, and explore content from other users. The platform provides a clean interface for writing and managing blogs with a responsive design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- User authentication (Sign up / Login / Logout)
+- Create, edit, and delete blog posts
+- View all published blog posts
+- Personal **My Posts** dashboard
+- Rich text editor for writing blog content
+- Image upload for blog posts
+- Responsive UI for mobile, tablet, and desktop
+- Protected routes for authenticated users
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+### Frontend
+- React
+- React Router
+- Redux Toolkit
+- Tailwind CSS
+
+### Backend & Services
+- Appwrite (Authentication, Database, Storage)
+
+### Libraries
+- React Hook Form
+- TinyMCE Editor
+
+---
+
+
+## Deployment
+
+The project is deployed on **Netlify**.
+
+## Live Website
+
+https://blogspacereact.netlify.app
+
+---

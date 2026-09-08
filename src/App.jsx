@@ -27,7 +27,7 @@ function App() {
    
     <Header />
     <main className='flex-grow text-center m-4'>
-      <p className='text-2xl font-bold'>Todo:</p>
+     
       <Outlet></Outlet>
     </main>
     <Footer />

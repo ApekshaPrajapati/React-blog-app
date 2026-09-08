@@ -5,7 +5,7 @@ BlogSpace is a modern blogging web application where users can create accounts, 
 
 ---
 
-## Features
+## 🚀Features
 
 - User authentication (Sign up / Login / Logout)
 - Create, edit, and delete blog posts
@@ -18,7 +18,7 @@ BlogSpace is a modern blogging web application where users can create accounts, 
 
 ---
 
-## Tech Stack
+## 🛠️Tech Stack
 
 ### Frontend
 - React
@@ -40,7 +40,7 @@ BlogSpace is a modern blogging web application where users can create accounts, 
 
 The project is deployed on **Netlify**.
 
-## Live Website
+## 🌐Live Demo
 
 https://blogspacereact.netlify.app
 
